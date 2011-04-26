@@ -15,3 +15,8 @@ webserver_source.sh
 This will install `nginx/lighttpd`, `php5`, `php-apc`, `mongodb` via source
 
 *update with exact versions
+
+History
+===============
+**v0.1**
+- Initial release
