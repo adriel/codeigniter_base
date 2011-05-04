@@ -10,7 +10,7 @@ What do the scripts do?
 ===============
 **ci\_install\_source:** Coming soon
 
-This will install `nginx/lighttpd`, `php5`, `php-apc`, `mongodb` via source
+This will install `nginx/lighttpd`, `php5`, `php-apc`, `mongodb` by compiling them from their sources.
 
 
 **ci\_install\_apt:** Currently only lightTPD
