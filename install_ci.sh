@@ -21,9 +21,6 @@
 # You should have received a copy of the GNU General Public License
 # along with codeigniter_base.  If not, please see <http://www.gnu.org/licenses/>.
 
-#!/bin/bash
-# v0.1
-
 OPT=$1
 VERBOSE=0
 
@@ -109,14 +106,15 @@ echo -ne "\nInstalling LightTPD, PHP 5, unzip, SSH (server/client) and htop...\n
 # apt-get -y -q=2 install lighttpd php5-cgi php-apc unzip htop 2> /dev/null
 if [[ $VERBOSE == 1 ]]; then
 	apt-get -y install lighttpd php5-cgi php-apc unzip htop openssh-client openssh-server
+elif [[ $VERBOSE == 2 ]]; then
+	apt-get install lighttpd php5-cgi php-apc unzip htop openssh-client openssh-server
 else
 	apt-get -y -q=2 install lighttpd php5-cgi php-apc unzip htop openssh-client openssh-server
 fi
 
-echo "Setting up CodeIgniter..."
-
+echo "Downloading CodeIgniter..."
 if [[ ! -f "${TMP_DIR}/$CI_DOWNLOAD_NAME" ]]; then
-	if [[ $VERBOSE == 1 ]]; then
+	if [[ $VERBOSE == 1 || $VERBOSE == 2 ]]; then
 		echo "Downloading CodeIgniter.."
 		wget "$CI_URL" --output-document "${TMP_DIR}/$CI_DOWNLOAD_NAME"
 	else
@@ -128,7 +126,7 @@ else
 	tput reset
 fi
 
-
+echo "Setting up CodeIgniter..."
 if [[ $VERBOSE == 1 ]]; then
 	unzip -q "${TMP_DIR}/$CI_DOWNLOAD_NAME" -d "${TMP_DIR}/${CI_SUB_DIR_NAME}"
 elif [[ $VERBOSE == 2 ]]; then
