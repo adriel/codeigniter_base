@@ -8,12 +8,17 @@ Requirements
 
 What do the scripts do?
 ===============
-**ci_install_source:** Coming soon
+**ci\_install\_source:** Coming soon
+
 This will install `nginx/lighttpd`, `php5`, `php-apc`, `mongodb` via source
 
-**ci_install_apt:** Currently only lightTPD
+
+**ci\_install\_apt:** Currently only lightTPD
+
 Incase the source method is broken for what ever reason use this.
+
 This will install `nginx/lighttpd`, `php5`, `php-apc`, `mongodb` using the apt package manager (apt-get).
+
 *update with exact versions
 
 Change log
