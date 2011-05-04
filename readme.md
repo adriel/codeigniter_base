@@ -4,7 +4,7 @@ I wanted an easy way to install the latest and greatest web server via source wi
 
 Requirements
 ===============
-Debian based system (Only been tested on a vanilla install of Debian 6.0.1a)
+* Debian based system (Only been tested on a vanilla install of Debian 6.0.1a)
 
 What do the scripts do?
 ===============
