@@ -6,11 +6,11 @@ I wanted an easy way to install the latest and greatest web server via source wi
 **webserver_apt:**
 Incase the source method is broken.
 
-webserver_apt.sh 
+ci_install_apt.sh 
 ===============
 This will install `nginx/lighttpd`, `php5`, `php-apc`, `mongodb` using the apt package manager (apt-get).
 
-webserver_source.sh 
+ci_install_source.sh 
 ===============
 This will install `nginx/lighttpd`, `php5`, `php-apc`, `mongodb` via source
 
