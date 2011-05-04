@@ -21,6 +21,10 @@ This will install `nginx/lighttpd`, `php5`, `php-apc`, `mongodb` using the apt p
 
 *update with exact versions
 
+Notes
+===============
+* MongoDB still needs to be added to both scripts.
+
 Change log
 ===============
 Look in the comment history...
