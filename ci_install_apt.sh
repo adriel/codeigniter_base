@@ -25,7 +25,7 @@ OPT=$1
 VERBOSE=0
 
 # Local ip address
-LOCAL_IP=$(ifconfig | grep 'inet addr:' | grep -v '127.0.0.1' | cut -d: -f2 | awk '{ print $1}')
+LOCAL_IP=$(hostname -I | awk '{ print $1}')
 
 # CodeIgniter download URL
 CI_URL="http://codeigniter.com/download.php"
